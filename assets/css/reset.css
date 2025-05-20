@@ -98,7 +98,7 @@ textarea,
 pre {
     border: none;
     font-size: 1rem;
-    color: var(--col-black);
+    color: #111111;
     margin: 0 auto;
 }
 button {
