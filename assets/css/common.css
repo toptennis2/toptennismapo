@@ -90,6 +90,18 @@ main { padding-top: 5rem; }
 .basic_table td { padding: .875rem 1.25rem; color: #666666; }
 .basic_table.td_center td { text-align: center; }
 
+/* 애니메이션 */
+@keyframes fadeup {
+    from {
+        transform: translateY(3.75rem);
+    }
+    to {
+        transform: translateY(0); opacity: 1;
+    }
+}
+.ani_box { opacity: 0; }
+.ani_box.active { animation: fadeup 0.5s linear both; }
+
 /* 메인 */
 .main_visual { display: flex; align-items: center; padding-inline: .9375rem; max-width: 161.25rem; margin: 0 auto; background: url('../images/main/main_bnr.png') no-repeat center top / cover; aspect-ratio: 1920 / 650; color: #fff; }
 .main_visual .max_w1920 { width: 100%; }

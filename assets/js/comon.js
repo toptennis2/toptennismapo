@@ -39,4 +39,25 @@ $(function(){
     $(".terms_box").on("click", function (e) {
         e.stopPropagation();
     });
+
+    // 애니메이션
+    const aniBoxes = document.querySelectorAll(".ani_box");
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+
+                // 리뷰 슬라이드 자동 멈춤
+                if (entry.target.matches(".review_slide")) {
+                    setTimeout(() => {
+                        profile_01.autoplay.stop();
+                        profile_02.autoplay.stop();
+                    }, 1000);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    aniBoxes.forEach(ani => observer.observe(ani));
 });
