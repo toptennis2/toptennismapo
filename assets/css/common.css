@@ -147,6 +147,12 @@ main { padding-top: 5rem; }
 .info_box p strong { display: inline; }
 .info_box .small { font-size: 1rem; padding-left: .625rem; }
 
+.other_img { display: flex; align-items: center; gap: 1.875rem; }
+.other_img img { width: calc(50% - .9375rem); }
+.other_tit { display: flex; align-items: center; gap: .625rem; font-size: 1.375rem; padding-block: 2.5rem; }
+.other_tit strong:first-child { display: flex; align-items: center; gap: .625rem; }
+.other_tit strong:first-child:after { content: ""; display: block; width: 1.5rem; height: 1.5rem; background: url('../images/icons/ic_arrow_right.svg') no-repeat center / contain; }
+
 /* 큰 해상도 */
 @media (min-width: 1921px) {
     .space_wrap .swiper { margin-right: auto; }
@@ -252,4 +258,8 @@ main { padding-top: 5rem; }
     .info_box .tit_02 { padding-bottom: .75rem; }
     .info_box .small,
     .info_box p { font-size: .875rem; padding-left: 0; }
+
+    .other_img { flex-direction: column; gap: 0; }
+    .other_img img { width: 100%; }
+    .other_tit { font-size: 1.125rem; padding-bottom: 1.25rem; }
 }
