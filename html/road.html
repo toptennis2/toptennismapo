@@ -456,10 +456,11 @@
 <script src="../assets/js/swiper-bundle.min.js"></script>
 <script src="../assets/js/comon.js"></script>
 <script>
+    var isMobile = window.innerWidth <= 768;
     var mapDiv = document.getElementById('map');
         var map = new naver.maps.Map(mapDiv, {
         center: new naver.maps.LatLng(37.556331, 126.943644),
-        zoom: 16
+        zoom: isMobile ? 16 : 18
     });
 
     var marker = new naver.maps.Marker({
