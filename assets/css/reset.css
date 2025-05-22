@@ -102,6 +102,7 @@ pre {
     margin: 0 auto;
 }
 button {
+    color: #111111;
     border: none;
     outline: none;
     cursor: pointer;
