@@ -28,7 +28,7 @@ footer a { display: block; padding-bottom: .625rem; }
 .floating { position: fixed; right: 3.125rem; bottom: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; align-items: end; z-index: 90; }
 .floating li { height: 4.125rem; border-radius: 62.4375rem; box-shadow: 0 .25rem .625rem rgba(0, 0, 0, 0.15); }
 .floating li img { width: 2rem; }
-.floating li:not(.top) { background-color: #4B5C6D; }
+.floating li:not(.top) { background-color: #0089FF; }
 .floating li a { display: inline-flex; align-items: center; justify-content: flex-end; gap: .25rem; padding-inline: 1.0625rem; max-width: 4.125rem; height: 100%; font-weight: 500; color: #fff; font-size: 1.125rem; transition: max-width 0.5s ease; white-space: nowrap; }
 .floating li a span { opacity: 0; transition: opacity 0.5s ease; margin-left: .375rem; }
 .floating li.top { width: 4.125rem; padding-top: 1.75rem; background: url('../images/icons/ic_arrow_up.svg') no-repeat center top .75rem / 1rem #fff; cursor: pointer; color: #000; font-weight: 700; text-align: center; transition: 0.3s; }
