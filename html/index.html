@@ -119,7 +119,46 @@
                         <img src="assets/images/main/img_info02.png" class="ani_box" alt="">
                     </li>
                     <li>
-                        <img src="assets/images/main/img_info06.png" class="ani_box" alt="">
+                        <div class="img_box ani_box">
+                            <div class="slide_wrap">
+                                <div class="swiper thumbs_slide01 slide01">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_grass01.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_grass02.jpeg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_grass03.jpeg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_grass04.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_prev"></div>
+                                <div class="main_next"></div>
+                                <div class="slide_pagination page_01 pc_none"></div>
+                            </div>
+
+                            <div class="swiper thumbs_slide02 slide02 m_none">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_grass01.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_grass02.jpeg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_grass03.jpeg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_grass04.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <strong class="tit_02">친환경 <span class="col_blue">잔디코트</span></strong>
                             <p>
@@ -172,7 +211,46 @@
                                 여성용(250g~280g) 어린이용을 구비해놨습니다. 편하게 사용하세요!
                             </p>
                         </div>
-                        <img src="assets/images/main/img_info04.png" class="ani_box" alt="">
+                        <div class="img_box ani_box">
+                            <div class="slide_wrap">
+                                <div class="swiper thumbs_slide01 slide03">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_foyer01.jpeg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_foyer02.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_foyer03.jpeg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/main/img_foyer04.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_prev"></div>
+                                <div class="main_next"></div>
+                                <div class="slide_pagination page_02 pc_none"></div>
+                            </div>
+
+                            <div class="swiper thumbs_slide02 slide04 m_none">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_foyer01.jpeg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_foyer02.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_foyer03.jpeg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/main/img_foyer04.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     
                 </ul>
@@ -544,11 +622,62 @@
         slidesPerView: "auto",
         spaceBetween: 32,
         loop: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        }
-    });
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            }
+        });
+
+        var swiper = new Swiper(".slide02", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,            
+        });
+        var swiper2 = new Swiper(".slide01", {
+            spaceBetween: 10,
+            pagination: {
+                el: ".page_01",
+                clickable: true,
+            },
+            navigation: {
+                prevEl: ".main_prev",
+                nextEl: ".main_next",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            }
+        });
+        var swiper = new Swiper(".slide04", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,            
+        });
+        var swiper2 = new Swiper(".slide03", {
+            spaceBetween: 10,
+            pagination: {
+                el: ".page_02",
+                clickable: true,
+            },
+            navigation: {
+                prevEl: ".main_prev",
+                nextEl: ".main_next",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            }
+        });
   
     })
 </script>

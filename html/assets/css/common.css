@@ -110,8 +110,10 @@ main { padding-top: 5rem; }
 
 .info_wrap { display: flex; flex-direction: column; gap: 5rem; padding-block: 5rem 6.25rem; }
 .info_wrap li { display: flex; align-items: center; gap: 1.875rem; }
+.thumbs_slide01 img { aspect-ratio: 595 / 440; width: 100%; }
+.info_wrap li > .img_box,
 .info_wrap li > img { width: calc(50% - 1.875rem); }
-.info_wrap li > div { flex: 1; }
+.info_wrap li > div:not(.img_box) { flex: 1; }
 .info_wrap li .tit_02 { padding-bottom: 1.25rem; }
 .info_wrap li p { color: #666; line-height: 1.6; }
 .info_wrap li a { margin-top: 2.25rem; }
@@ -138,6 +140,12 @@ main { padding-top: 5rem; }
 .slide_pagination .swiper-pagination-bullet { background-color: transparent; border: 1px solid #fff; opacity: 1; }
 .slide_pagination .swiper-pagination-bullet-active { background-color: #fff; }
 
+.main_prev,
+.main_next { position: absolute; top: calc(50% - 1.5625rem); width: 3.125rem; height: 3.125rem; background: url('../images/icons/slide_arrow02.svg') no-repeat center / contain; z-index: 1; }
+.main_prev { left: 0; }
+.main_next { right: 0; transform: rotate(180deg); }
+
+.img_box .thumbs_slide02 { margin-top: .625rem; aspect-ratio: 595 / 102; }
 .thumbs_slide02 { aspect-ratio: 1250 / 170; margin-top: 1rem; }
 .thumbs_slide02 .swiper-slide { display: flex; }
 .thumbs_slide02 .swiper-slide img { display: block; object-fit: cover; width: 100%; height: 100%; }
@@ -261,10 +269,13 @@ main { padding-top: 5rem; }
     .main_visual p { font-size: 2.1875rem; }
     .info_wrap { padding-block: 2.5rem 3.125rem; }
     .info_wrap li { flex-direction: column; align-items: start; }
+    .info_wrap li > .img_box,
     .info_wrap li > img { width: 100%; order: 1; }
-    .info_wrap li > div { order: 2; }
+    .info_wrap li > div:not(.img_box) { order: 2; }
     .info_wrap li a { margin-top: 1.125rem; }
     .space_wrap .swiper-slide { width: 100%; }
+    .main_prev,
+    .main_next { display: none; }
 
     /* 서브 */
     .basic_table th, .basic_table td { font-size: .8125rem; }
